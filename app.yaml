@@ -1,0 +1,22 @@
+runtime: nodejs24
+entrypoint: npm start
+
+env: standard
+
+handlers:
+  - url: /
+    static_files: client/dist/index.html
+    upload: client/dist/index.html
+
+  - url: /assets/(.*\.js)
+    static_files: client/dist/assets/\1
+    upload: client/dist/assets/.*\.js
+    mime_type: application/javascript
+
+  - url: /assets/(.*\.css)
+    static_files: client/dist/assets/\1
+    upload: client/dist/assets/.*\.css
+    mime_type: text/css
+
+  - url: /.*
+    script: auto

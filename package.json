@@ -1,0 +1,18 @@
+{
+  "name": "bookshelf-recs",
+  "version": "1.0.0",
+  "private": true,
+  "engines": { "node": "24.x" },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm --prefix server start"
+  },
+  "dependencies": {
+    "@google/genai": "^2.11.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "json5": "^2.2.3",
+    "multer": "^2.1.1"
+  }
+}
