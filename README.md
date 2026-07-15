@@ -5,10 +5,15 @@ user's bookshelf.
 
 [Visit Website](https://bookshelf-recs.wl.r.appspot.com/)
 
+## Features
+
+- Upload a bookshelf photo and have books analyzed
+- Get personal book recommendations
+- See cover art, genres, and description for each recommendation
+
 ## Preview
 
-<img src="/demo-gifs/book-recs-gif-1.gif" width="250" />
-<img src="/demo-gifs/book-recs-gif-2.gif" width="250" />
+![Book Recs gif](/demo-gifs/book-recs-gif.gif)
 
 ## Tech Stack
 
