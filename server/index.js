@@ -3,7 +3,9 @@ import cors from 'cors';
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
+
 import { getBooks } from './books.js';
+import { getGeminiError } from './utilities/getGeminiError.js';
 
 const app = express();
 
@@ -25,8 +27,10 @@ app.post('/book-recs', upload.single('photo'), async (req, res) => {
     res.json(books);
   } catch (error) {
     console.error('Error calling Gemini:', error);
-    res.status(error.error.code || 500).json({
-      error: { message: error.error.message || 'Error calling Gemini.' },
+    const status = error?.status ?? error?.response?.status ?? 500;
+    const message = getGeminiError(error);
+    res.status(status).json({
+      error: { message: message },
     });
   } finally {
     fs.unlink(req.file.path, () => {});

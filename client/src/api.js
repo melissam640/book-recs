@@ -11,7 +11,7 @@ const getBookDetails = async (book) => {
   });
 
   if (!response.ok) {
-    throw new Error(`Upload failed: ${response.status}`);
+    throw new Error(`Error fetching book details: ${response.status}`);
   }
   
   const data = await response.json();
@@ -50,7 +50,7 @@ export const getBookRecs = async (file) => {
 
   if (!response.ok) {
     const genaiError = await response.json();
-    throw new Error(`Upload failed: ${genaiError?.error?.message || response.status}`);
+    throw new Error(`AI model error: ${genaiError?.error?.message || response.status}`);
   }
 
   const data = await response.json();

@@ -29,7 +29,7 @@ export const handlePhotoUpload = async ({
     }
   } catch (error) {
     setError(error.message || 'An unknown server error occurred.');
-    console.error('Error handling photo upload:', error);
+    console.error(error);
   } finally {
     setIsLoading(false);
   }

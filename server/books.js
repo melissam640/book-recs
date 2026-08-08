@@ -86,7 +86,7 @@ if (process.argv[1]?.endsWith('/books.js')) {
       .then((books) => console.log(JSON.stringify(books)))
       .catch((error) => {
         console.error(error);
-        console.log(JSON.stringify({ error: { message: error.error.message || 'Error calling AI model.' } }));
+        console.log(JSON.stringify({ error: { message: error?.error?.message || error || 'Error calling AI model.' } }));
         process.exitCode = 1;
       });
   }
