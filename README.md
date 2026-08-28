@@ -3,7 +3,7 @@
 An app that uses AI to provide book recommendations based on a photo of a 
 user's bookshelf.
 
-[Visit Website](https://bookshelf-recs.wl.r.appspot.com/)
+<!-- [Visit Website](https://bookshelf-recs.wl.r.appspot.com/) -->
 
 ## Features
 
